@@ -1,0 +1,69 @@
+{
+	"id": "5734bad6-e3f1-0af4-ab8e-8e072034356b",
+	"name": "example REST",
+	"description": "",
+	"order": [
+		"695c7b82-bad8-7aca-3233-a5b2ec4b37cf",
+		"916ec9df-dfd4-5ca1-10c2-58d8416cbcd9",
+		"70b50df9-3600-37d8-1dab-90d70e8b6993"
+	],
+	"folders": [],
+	"timestamp": 1439383743661,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "695c7b82-bad8-7aca-3233-a5b2ec4b37cf",
+			"url": "http://localhost:8080/employees/",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAccept: application/json\n",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"preRequestScript": "",
+			"currentHelper": "normal",
+			"pathVariables": {},
+			"version": 2,
+			"name": "http://localhost:8080/employees/",
+			"description": "",
+			"descriptionFormat": "html",
+			"collectionId": "5734bad6-e3f1-0af4-ab8e-8e072034356b"
+		},
+		{
+			"id": "70b50df9-3600-37d8-1dab-90d70e8b6993",
+			"url": "http://localhost:8080/employees/3",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAccept: application/json\n",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"preRequestScript": "",
+			"currentHelper": "normal",
+			"pathVariables": {},
+			"version": 2,
+			"name": "http://localhost:8080/employees/3",
+			"description": "",
+			"descriptionFormat": "html",
+			"collectionId": "5734bad6-e3f1-0af4-ab8e-8e072034356b"
+		},
+		{
+			"id": "916ec9df-dfd4-5ca1-10c2-58d8416cbcd9",
+			"url": "http://localhost:8080/employee",
+			"method": "POST",
+			"headers": "Content-Type: application/json\nAccept: application/json\n",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"preRequestScript": "",
+			"currentHelper": "normal",
+			"pathVariables": {},
+			"version": 2,
+			"name": "http://localhost:8080/employee",
+			"description": "",
+			"descriptionFormat": "html",
+			"collectionId": "5734bad6-e3f1-0af4-ab8e-8e072034356b",
+			"rawModeData": "{\n  \"firstName\": \"benji\",\n  \"lastName\": \"Garcia\",\n  \"email\": \"benjamin.garcia@acelys.fr\"\n}"
+		}
+	]
+}
