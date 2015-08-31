@@ -32,7 +32,7 @@ public class EmployeeRESTController
         return employees;
     }
      
-    @RequestMapping(value = "/employees/{id}", produces = {"application/json", "application/xml"})
+    @RequestMapping(method = RequestMethod.GET, value = "/employee/{id}", produces = {"application/json", "application/xml"})
     @ResponseBody
     public ResponseEntity<EmployeeVO> getEmployeeById (@PathVariable("id") int id) 
     {
@@ -50,5 +50,16 @@ public class EmployeeRESTController
         employeeVO.setId(employees.getEmployees().size());
         employees.getEmployees().add(employeeVO);
         return new ResponseEntity<EmployeeVO>(HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/employee/{id}",produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
+    @ResponseBody
+    public ResponseEntity<Integer> deleteEmployeeById(@PathVariable("id") int id){
+        if(id <employees.getEmployees().size()){
+            employees.getEmployees().remove(id);
+            return new ResponseEntity<Integer>(HttpStatus.ACCEPTED);
+        } else {
+            return new ResponseEntity<Integer>(HttpStatus.NO_CONTENT);
+        }
     }
 }
